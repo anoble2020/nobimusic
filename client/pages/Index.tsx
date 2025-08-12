@@ -1,10 +1,32 @@
 import { ExternalLink, Instagram, Twitter, Youtube, Mail } from "lucide-react";
+import { ShaderGradientCanvas, ShaderGradient } from '@shadergradient/react';
+import { extend } from '@react-three/fiber';
+import * as THREE from 'three';
+
+// Extend the three.js catalog for react-three-fiber
+extend(THREE);
 
 export default function Index() {
   return (
-    <div className="min-h-screen bg-gradient-animated text-white relative overflow-hidden">
-      {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-animated opacity-100" />
+    <div className="min-h-screen text-white relative overflow-hidden">
+      {/* ShaderGradient background */}
+      <div className="absolute inset-0">
+        <ShaderGradientCanvas
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            zIndex: 0,
+          }}
+        >
+          <ShaderGradient
+            control="query"
+            urlString="https://www.shadergradient.co/customize?animate=on&axesHelper=off&bgColor1=%23000000&bgColor2=%23000000&brightness=1&cAzimuthAngle=180&cDistance=2.8&cPolarAngle=80&cameraZoom=9.1&color1=%23606080&color2=%23ca923f&color3=%23212121&destination=onCanvas&embedMode=off&envPreset=city&format=gif&fov=45&frameRate=10&gizmoHelper=hide&grain=on&lightType=3d&pixelDensity=1&positionX=0&positionY=0&positionZ=0&range=enabled&rangeEnd=40&rangeStart=0&reflection=0.1&rotationX=50&rotationY=0&rotationZ=-60&shader=defaults&toggleAxis=true&type=waterPlane&uAmplitude=0&uDensity=1.5&uFrequency=0&uSpeed=0.1&uStrength=1.5&uTime=8&wireframe=false"
+          />
+        </ShaderGradientCanvas>
+      </div>
       
       {/* Main content */}
       <div className="relative z-10 min-h-screen flex flex-col">
