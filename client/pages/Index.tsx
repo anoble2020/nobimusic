@@ -36,7 +36,7 @@ export default function Index() {
             
             {/* Left container - nobi text and streaming links */}
             <div className="text-center lg:text-left space-y-8">
-              <h1 className="text-8xl md:text-9xl lg:text-[10rem] font-bold tracking-tight text-white opacity-90">
+              <h1 className="text-8xl md:text-9xl lg:text-[10rem] font-pirata font-normal tracking-tight text-white opacity-90">
                 nobi
               </h1>
               
