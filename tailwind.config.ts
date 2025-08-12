@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        'pirata': ['Pirata One', 'cursive'],
-        'geist': ['Geist', 'system-ui', 'sans-serif'],
+        pirata: ["Pirata One", "cursive"],
+        geist: ["Geist", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
