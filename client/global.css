@@ -104,3 +104,58 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .bg-gradient-animated {
+    background: linear-gradient(-45deg, #0a0a0a, #2d1b69, #ff6b35, #f9844a, #ee6c4d, #3a0f3a, #0a0a0a);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    position: relative;
+  }
+
+  .bg-gradient-animated::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(255, 107, 53, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(249, 132, 74, 0.2) 0%, transparent 50%);
+    filter: blur(40px);
+    opacity: 0.8;
+  }
+
+  .bg-gradient-animated::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+      radial-gradient(1px 1px at 20px 30px, rgba(255, 255, 255, 0.15), transparent),
+      radial-gradient(1px 1px at 40px 70px, rgba(255, 255, 255, 0.1), transparent),
+      radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.08), transparent),
+      radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 255, 0.12), transparent),
+      radial-gradient(1px 1px at 160px 30px, rgba(255, 255, 255, 0.1), transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    opacity: 1;
+    mix-blend-mode: overlay;
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
