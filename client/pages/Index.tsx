@@ -84,15 +84,16 @@ export default function Index() {
                   </div>
                 </div>
                 
-                {/* Uncomment and replace with your actual SoundCloud embed:
-                <iframe 
-                  width="100%" 
-                  height="400" 
-                  scrolling="no" 
-                  frameBorder="no" 
-                  allow="autoplay" 
+                {/* To add your SoundCloud playlist, replace the placeholder above with:
+                <iframe
+                  width="100%"
+                  height="400"
+                  scrolling="no"
+                  frameBorder="no"
+                  allow="autoplay"
                   src="https://w.soundcloud.com/player/?url=YOUR_PLAYLIST_URL&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
                   className="rounded-xl"
+                  title="SoundCloud Playlist"
                 ></iframe>
                 */}
               </div>
